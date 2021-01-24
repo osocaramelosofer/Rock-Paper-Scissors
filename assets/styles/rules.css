@@ -1,0 +1,13 @@
+.rulesModalButton {
+    justify-self: flex-end;
+    width: 150px;
+    height: 100%;
+    border-radius: 10px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+    letter-spacing: 1px;
+}

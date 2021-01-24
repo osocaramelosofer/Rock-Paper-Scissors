@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+.gameContainer {
+    width: 100%;
+    background-image: radial-gradient( hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    min-height: 100vh;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: .8fr 2.8fr .3fr;
+    justify-items: center;
+}
+.gameApp{
+    height: calc(100vh - 250px);
+    width: auto;
+}
