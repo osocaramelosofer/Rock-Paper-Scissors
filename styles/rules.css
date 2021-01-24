@@ -11,3 +11,15 @@
     outline: none;
     letter-spacing: 1px;
 }
+
+.rulesModal {
+    position: absolute;
+    height: 250px;
+    width: 280px;
+    top: 40%;
+    left: 40%;
+    
+}
+.rulesModal.hidden{
+    display: none;
+}
