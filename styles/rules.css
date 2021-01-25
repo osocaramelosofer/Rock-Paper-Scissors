@@ -38,7 +38,7 @@
     width: 280px;
     top: 30%;
     left: 38%;
-    
+    z-index: 2;
 }
 .rulesModal.hidden{
     display: none;
