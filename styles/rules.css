@@ -11,6 +11,26 @@
     outline: none;
     letter-spacing: 1px;
 }
+.rulesModalButton:link,
+.rulesModalButton:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2;
+}
+.rulesModalButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+.rulesModalButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+
+
 
 .rulesModal {
     position: absolute;
@@ -73,9 +93,8 @@
     animation: animationBtnClose .8s ease-out;
 }
 .card__btn:active {
-    transform: translateY(100px);
+    transform: translateY(-8px);
 }
-
 
 /*Animations*/
 @keyframes animationBtnClose{
