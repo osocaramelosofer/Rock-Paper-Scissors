@@ -20,3 +20,101 @@ body {
     height: calc(100vh - 250px);
     width: auto;
 }
+.gameBoard {
+    width: 500px;
+    height: 400px;
+    background: url('../assets/bg-triangle.svg') no-repeat center ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "option1 option1 option2 option2" ". option3 option3 .";
+    align-items: center;
+    justify-items: center;
+}
+.option {
+    background: none;
+    border: none;
+    width: 150px;
+    height: 150px;
+    outline: none;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.option__border1 {
+    width: inherit;
+    height: inherit;
+    background-image: linear-gradient(  hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px hsl(221, 89%, 33%);
+    
+}
+.option__border2 {
+    width: inherit;
+    height: inherit;
+    background-image: linear-gradient( hsl(39, 89%, 49%) , hsl(40, 84%, 53%));
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px hsl(46, 95%, 41%);
+    
+}
+.option__border3 {
+    width: inherit;
+    height: inherit;
+    background-image: linear-gradient( hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px hsl(349, 68%, 45%);
+    
+}
+
+.option__content {
+    background-color: #FFF;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -1px 5px #ddd;
+}
+
+.option1 {
+    grid-area: option1;
+}
+.option:link,
+.option:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2;
+}
+.option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    border: none;
+}
+.option:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    border: none;
+}
+
+.option2 {
+    grid-area: option2;
+}
+
+.option3 {
+    grid-area: option3;
+}
