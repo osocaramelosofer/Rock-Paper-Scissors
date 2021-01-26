@@ -1,5 +1,5 @@
-import { compareBoard } from "./templates/gameContainer";
-const gameContainer = document.querySelector(".gameContainer");
+
+const gameApp = document.querySelector(".gameApp");
 
 const bntRules = document.querySelector(".rulesModalButton");
 const rulesModal = document.querySelector(".rulesModal");
@@ -27,13 +27,14 @@ options.forEach((btn) => {
 });
 
 const compare = (userChoise) => {
-  //compareView();
+  compareView(userChoise);
   console.log("click");
   const random = Math.floor(Math.random() * (4 - 1) + 1);
 };
 
-const compareView = () => {
-  console.log(gameContainer);
+const compareView = (userChoise) => {
+  console.log(userChoise);
 
-  gameContainer.innerHTML = compareBoard;
+  gameApp.innerHTML = compareBoard(userChoise);
 };
+

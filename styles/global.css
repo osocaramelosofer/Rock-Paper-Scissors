@@ -110,6 +110,12 @@ body {
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
     border: none;
 }
+.compared.option:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+
 
 .option2 {
     grid-area: option2;
