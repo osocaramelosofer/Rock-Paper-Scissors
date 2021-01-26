@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/modal-score.css">
-    <link rel="stylesheet" href="./styles/rules.css">
 
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/modal-score.css" />
+    <link rel="stylesheet" href="./styles/rules.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="gameContainer">
-
-        <div class="rulesModal hidden">
-            <div class="card">
-                <div class="card__rules"> <h1>rules</h1> </div>
-                <button id="btnClose" class="card__btn">x</button>
-                <div class="card__img"> <img src="./assets/image-rules.svg" alt="rules"> </div>
-            </div>
+      <div class="rulesModal hidden">
+        <div class="card">
+          <div class="card__rules"><h1>rules</h1></div>
+          <button id="btnClose" class="card__btn">x</button>
+          <div class="card__img">
+            <img src="./assets/image-rules.svg" alt="rules" />
+          </div>
         </div>
+      </div>
 
-        <div class="modal">
-            <h2 class="modal__text">
-                rock
-                <br>
-                paper
-                <br>
-                scissors
-            </h2>
-    
-            <div class="modal__score">
-                <h4 class="modal__score--text">score</h4>
-                <p class="modal__score--number">
-                    0
-                </p>
-            </div>
+      <div class="modal">
+        <h2 class="modal__text">
+          rock
+          <br />
+          paper
+          <br />
+          scissors
+        </h2>
+
+        <div class="modal__score">
+          <h4 class="modal__score--text">score</h4>
+          <p class="modal__score--number">
+            0
+          </p>
         </div>
+      </div>
 
-        <div class="gameApp">
-            <div class="gameBoard">
-                <button id="btn hand-rock" class="option option1">
-                    <div class="option__border1">
-                        <div class="option__content">
-                            <img src="./assets/icon-paper.svg" alt="paper">
-                        </div>
-                    </div>
-                </button>
-                <button id="btn hand-scissors" class="option option2">
-                    <div class="option__border2">
-                        <div class="option__content">
-                            <img src="./assets/icon-scissors.svg" alt="scissors">
-                        </div>
-                    </div>
-                </button>
-                <button id="btn hand-paper" class="option option3">
-                    <div class="option__border3">
-                        <div class="option__content">
-                            <img src="./assets/icon-rock.svg" alt="rock">
-                        </div>
-                    </div>
-                </button>
+      <div class="gameApp">
+        <div class="gameBoard">
+          <button id="btnRock" class="option option1" value="1">
+            <div class="option__border1">
+              <div class="option__content">
+                <img src="./assets/icon-paper.svg" alt="paper" />
+              </div>
             </div>
+          </button>
+          <button id="btnScissors" class="option option2" value="2">
+            <div class="option__border2">
+              <div class="option__content">
+                <img src="./assets/icon-scissors.svg" alt="scissors" />
+              </div>
+            </div>
+          </button>
+          <button id="btnPaper" class="option option3" value="3">
+            <div class="option__border3">
+              <div class="option__content">
+                <img src="./assets/icon-rock.svg" alt="rock" />
+              </div>
+            </div>
+          </button>
         </div>
+      </div>
 
-        <button class="rulesModalButton">rules</button>
+      <button class="rulesModalButton">rules</button>
     </div>
     <script src="./js/app.js"></script>
-</body>
+  </body>
 </html>
