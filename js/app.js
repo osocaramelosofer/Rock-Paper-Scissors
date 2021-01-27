@@ -1,12 +1,8 @@
-
-
-const gameApp = document.querySelector(".gameApp");
-
-const bntRules = document.querySelector(".rulesModalButton");
-const rulesModal = document.querySelector(".rulesModal");
-const btnClose = document.querySelector("#btnClose");
-
-const score = document.querySelector('.modal__score--number');
+const gameApp    = document.querySelector(".gameApp"),
+      bntRules   = document.querySelector(".rulesModalButton"),
+      rulesModal = document.querySelector(".rulesModal"),
+      btnClose   = document.querySelector("#btnClose"),
+      score = document.querySelector('.modal__score--number');
 
 bntRules.addEventListener("click", () => {
   rulesModal.classList.remove("hidden");
@@ -17,33 +13,25 @@ btnClose.addEventListener("click", () => {
 });
 
 
-
-
 const initGame = () => {
 
-  score.innerText = window.localStorage.getItem('score') || '0';
+  score.innerText   = window.localStorage.getItem('score') || '0';
   gameApp.innerHTML = initBoard;
 
-  const btnPaper = document.querySelector("#btnPaper");
-  const btnScissors = document.querySelector("#btnScissors");
-  const btnRock = document.querySelector("#btnRock");
-  const options = [btnPaper, btnScissors, btnRock];
+  const btnPaper    = document.querySelector("#btnPaper"),
+        btnScissors = document.querySelector("#btnScissors"),
+        btnRock     = document.querySelector("#btnRock"),
+        options     = [btnPaper, btnScissors, btnRock];
 
   options.forEach((btn) => {
     btn.addEventListener("click", () => {
       compare(btn.value, options);
     });
   });
-  
-
-
-
 
 }
 
 initGame();
-
-
 
 const compare = (userChoise, options) => {
   options.forEach((btn) => {
@@ -53,11 +41,11 @@ const compare = (userChoise, options) => {
   compareView(userChoise);
   const random = Math.floor(Math.random() * (4 - 1) + 1);
   setTimeout(() => {
-    const optionHouse = document.querySelector('.optionHouse');
+    const optionHouse   = document.querySelector('.optionHouse');
     optionHouse.innerHTML = houseOption(random);
 
     showResult(userChoise, random);
-  }, 1500);
+  }, 500);
 
 
 };

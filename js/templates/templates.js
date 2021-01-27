@@ -17,7 +17,6 @@ const compareBoard = (option) => `
 
 
   <div class="resultContainer"> </div>
-
   <div class="optionPicked">
       <h2 class="title">The house picked</h2>
       <div class="optionHouse">
