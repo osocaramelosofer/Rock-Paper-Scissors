@@ -34,10 +34,10 @@
 
 .rulesModal {
     position: absolute;
-    height: 250px;
-    width: 280px;
-    top: 30%;
-    left: 38%;
+    height: 400px;
+    width: 350px;
+    top: calc(50% - 400px / 2);
+    left: calc(50% - 350px / 2);
     z-index: 2;
 }
 .rulesModal.hidden{
@@ -45,8 +45,8 @@
 }
 /*Modal rules */
 .card{
-    height: 400px;
-    width: 350px;
+    height: inherit;
+    width: inherit;
     background-color: #fff;
     border-radius: 10px;
 
@@ -112,14 +112,24 @@
     grid-area: img;
 }
 
+@media screen and (max-width: 768px) {
+    .rulesModalButton {
+        justify-self: center;
+    }
+}
 
-@media screen and (max-width:320px){
-    .card{
+@media screen and (max-width:375px){
+
+    .rulesModal{
         height: 100vh;
-        width: 350px;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .card{
         background-color: #fff;
-        border-radius: 10px;
-    
+        border-radius: 0;
         display: grid;
         grid-template-rows   : 1fr 2fr 1fr;
         grid-template-columns:  1fr;

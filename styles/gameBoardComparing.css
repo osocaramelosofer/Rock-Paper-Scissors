@@ -6,53 +6,45 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 .compareBoard{
-    width: 500px;
+    width: 100%;
+    max-width: 800px;
     height: 400px;
     border: none;
     display: flex;
     flex-direction: row;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     
 }
 .optionPicked{
     text-align: center;
-
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title{
     font-weight: 700;
+    height: 70px;
     color: #fff;
     text-transform: uppercase;
     
 }
-.option {
-    width: 150px;
-    height: 150px;
+.compareBoard .option {
+    width: 200px;
+    height: 200px;
 }
 
 .option__border {
     width: inherit;
     height: inherit;
-    background-image: linear-gradient( hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     border-radius: 50%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 8px hsl(349, 68%, 45%);
-    
 }
 
-.option__content {
-    background-color: #FFF;
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset -1px 5px #ddd;
-}
 .optionHouse{
     width: 150px;
     height: 150px;
@@ -62,4 +54,43 @@ body {
     height:150px;
     background-color: rgba(15, 2, 61, 0.26);
     border-radius: 50%;
+}
+
+@media screen and (max-width: 768px){
+    .compareBoard {
+        display: grid;
+        grid-template-rows: 200px 200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "option1 option2" "result result";
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .optionPicked {
+        flex-direction: column-reverse;
+    }
+
+    .optionPicked .title {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .compareBoard .option {
+        width: 140px;
+        height: 140px;
+    }
+
+    .optionPicked:nth-of-type(1) {
+        grid-area: option1;
+    }
+
+    .optionPicked:nth-of-type(2) {
+        grid-area: option2;
+    }
+
+    .resultContainer {
+        grid-area: result;
+    }
+
 }

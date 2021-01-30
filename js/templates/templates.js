@@ -40,7 +40,7 @@ const houseOption = (option) => `
 
 const resultMessage = (result) => `
 <div class="resultMessage">
-    <h1 class="result">${result == -1 ? 'you lose' : result == 1 ? 'you win' : 'drow'}</h1>
+    <h1 class="result">${result == -1 ? 'you lose' : result == 1 ? 'you win' : 'draw'}</h1>
     <button class="btn-playAgain" onClick="initGame()">play again</button>
 </div>
 `
